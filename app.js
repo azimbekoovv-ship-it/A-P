@@ -6,7 +6,7 @@
 /* =====================================================================
    Константы
    ===================================================================== */
-const APP_VERSION = '3.1.0';
+const APP_VERSION = '3.1.1';
 const BASE_CATS = [
   { id: 'work', color: '#4f6df5' }, { id: 'gym', color: '#f2894a' }, { id: 'guitar', color: '#9b5de5' },
   { id: 'business', color: '#1fa88a' }, { id: 'it', color: '#e6a817' }, { id: 'practice', color: '#e5517a' },
@@ -91,8 +91,8 @@ const L = {
     restore: 'Възстанови', weekRestored: 'Седмицата е възстановена', purge: 'Изтрий завинаги', purgeT: 'Да изтрия ли завинаги?', purgeText: '{title}\nТова не може да се отмени.', weekPurged: 'Седмицата е изтрита завинаги',
     emptyTrash: 'Изпразни кошчето', emptyTrashT: 'Да изпразня ли кошчето?', emptyTrashText: 'Всички седмици в кошчето ({n}) ще бъдат изтрити завинаги.', trashedOn: 'Изтрита {date}', rowTrash: 'Кошче', rowTrashSub: 'Изтрити архивни седмици: {n}', open: 'Отвори',
     resetSettings: 'Нулирай настройките', resetSettingsText: 'Език, тема, режим на показване, PIN при отваряне и изтритите категории се връщат по подразбиране. Данните и PIN кодът остават.', resetSettingsT: 'Да нулирам ли настройките?', resetOk: 'Нулирай', resetDone: 'Настройките са нулирани',
-    wipe: 'Изтрий всички данни', wipeSub: 'Връща приложението като при първо стартиране на това устройство.', wipeT: 'Да изтрия ли всички данни?',
-    wipeText: 'Ще бъдат изтрити седмиците, архивът, кошчето, категориите и PIN кодът (ще стане 1234) на това устройство.\nДанните в облака не се засягат: след нов вход с Google те ще се върнат.\n\nПреди това свалете резервно копие.', wipePin: 'Потвърдете с PIN кода.', wipeOk: 'Изтрий всичко', wipeDone: 'Данните са изтрити',
+    wipe: 'Изтрий всички данни', wipeSub: 'Изтрива задачите, архива и кошчето. PIN кодът, настройките и входът с Google остават.', wipeT: 'Да изтрия ли всички данни?',
+    wipeText: 'Ще бъдат изтрити задачите, архивът и кошчето. PIN кодът, настройките и входът с Google няма да се променят.\nАко синхронизацията е включена, данните ще се изтрият и от облака, и на другите устройства.\n\nПреди това свалете резервно копие.', wipePin: 'Потвърдете с PIN кода.', wipeOk: 'Изтрий всичко', wipeDone: 'Данните са изтрити',
     pdfReady: 'PDF файлът е готов', pdfSave: 'Запази PDF', pdfOpen: 'Отвори', pdfShare: 'Сподели', close: 'Затвори', pdfHint: 'Ако файлът не се свали сам, натиснете „Запази PDF“. Ако и това не помага, задръжте пръст върху изображението и го запазете.',
     installDesktop: 'На компютър с Windows: инсталирайте приложението от Edge или Chrome. Ще се появи в менюто „Старт“ и ще се отваря в отделен прозорец.',
     version: 'A&P · версия {v}',
@@ -173,8 +173,8 @@ const L = {
     restore: 'Восстановить', weekRestored: 'Неделя восстановлена', purge: 'Удалить навсегда', purgeT: 'Удалить навсегда?', purgeText: '{title}\nЭто нельзя отменить.', weekPurged: 'Неделя удалена навсегда',
     emptyTrash: 'Очистить корзину', emptyTrashT: 'Очистить корзину?', emptyTrashText: 'Все недели в корзине ({n}) будут удалены навсегда.', trashedOn: 'Удалена {date}', rowTrash: 'Корзина', rowTrashSub: 'Удалённых архивных недель: {n}', open: 'Открыть',
     resetSettings: 'Сбросить настройки', resetSettingsText: 'Язык, тема, режим просмотра, PIN при запуске и удалённые категории вернутся к значениям по умолчанию. Данные и PIN-код останутся.', resetSettingsT: 'Сбросить настройки?', resetOk: 'Сбросить', resetDone: 'Настройки сброшены',
-    wipe: 'Удалить все данные', wipeSub: 'Возвращает приложение в состояние первого запуска на этом устройстве.', wipeT: 'Удалить все данные?',
-    wipeText: 'Будут удалены недели, архив, корзина, категории и PIN-код (станет 1234) на этом устройстве.\nДанные в облаке не затрагиваются: после нового входа через Google они вернутся.\n\nСначала скачайте резервную копию.', wipePin: 'Подтвердите PIN-кодом.', wipeOk: 'Удалить всё', wipeDone: 'Данные удалены',
+    wipe: 'Удалить все данные', wipeSub: 'Удаляет занятия, архив и корзину. PIN-код, настройки и вход через Google остаются.', wipeT: 'Удалить все данные?',
+    wipeText: 'Будут удалены занятия, архив и корзина. PIN-код, настройки и вход через Google не изменятся.\nЕсли синхронизация включена, данные удалятся и из облака, и на других устройствах.\n\nСначала скачайте резервную копию.', wipePin: 'Подтвердите PIN-кодом.', wipeOk: 'Удалить всё', wipeDone: 'Данные удалены',
     pdfReady: 'PDF-файл готов', pdfSave: 'Сохранить PDF', pdfOpen: 'Открыть', pdfShare: 'Поделиться', close: 'Закрыть', pdfHint: 'Если файл не скачался сам, нажмите «Сохранить PDF». Если и это не помогло, задержите палец на изображении и сохраните его.',
     installDesktop: 'На компьютере с Windows: установите приложение из Edge или Chrome. Оно появится в меню «Пуск» и будет открываться в отдельном окне.',
     version: 'A&P · версия {v}',
@@ -1009,15 +1009,12 @@ async function resetSettings() {
 async function wipeAll() {
   if (!(await confirmDialog({ title: t('wipeTitle'), text: t('wipeText'), okText: t('wipeOk'), danger: true }))) return;
   if (state.settings.requirePin && !(await askPin(t('wipeTitle'), t('wipePin')))) return;
-  try { if (window.APCloud && cloudUser) await APCloud.signOut(); } catch { /* ok */ }
-  cloudUser = null; cloudStatus = { state: 'off', at: null };
-  const keep = state.settings.lang;
-  try { ['weekly_tasks', 'ap_week_archives', 'weekly_pin', 'weekly_dark', 'ap_theme', LS_KEY].forEach(k => localStorage.removeItem(k)); } catch { /* ok */ }
-  try { sessionStorage.clear(); sessionStorage.setItem('ap_unlocked', '1'); } catch { /* ok */ }
-  state = normalize(await freshState(false)); state.settings.lang = keep; state.dataUpdatedAt = Date.now();
-  try { await idbSet(STATE_KEY, state); } catch { /* ok */ }
-  save(); ui.tab = 'more'; ui.archiveId = null; ui.trash = false; ui.selectedDay = null;
-  applyLang(); applyTheme(); render(); toast(t('wipeDone'));
+  /* Очищаются только занятия, архив и корзина. PIN, язык, тема и вход через Google остаются. */
+  const now = Date.now();
+  state.archive = state.archive.map(a => a.purged ? a : Object.freeze({ ...a, purged: true, deletedAt: a.deletedAt || now, tasks: [], stats: { count: 0, minutes: 0, done: 0 }, statusAt: now }));
+  state.currentWeek = { id: uid(), startDate: mondayOf(todayISO()), createdAt: now, tasks: [] };
+  ui.tab = 'more'; ui.archiveId = null; ui.trash = false; ui.selectedDay = null;
+  await saveContent(); render(); toast(t('wipeDone'));
 }
 
 /* =====================================================================
