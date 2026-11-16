@@ -1,6 +1,6 @@
 /* A&P — service worker: работа офлайн.
    Стратегия: сначала сеть (чтобы обновления на GitHub Pages появлялись сразу), при отсутствии сети — копия из кэша. */
-const CACHE = 'ap-planner-v3.1.0';
+const CACHE = 'ap-planner-v3.1.2';
 const CORE = [
   './', './index.html', './styles.css', './app.js', './cloud.js', './firebase-config.js', './manifest.webmanifest',
   './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png',
